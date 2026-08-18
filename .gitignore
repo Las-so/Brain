@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Real watchlist/positions and logs -- keep your entries/stops out of git
+config.json
+alerts.log
+alerts.log.*
+
+.env
+.venv/
+venv/

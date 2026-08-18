@@ -1,0 +1,14 @@
+{
+  "watchlist": ["SPY", "QQQ", "TSLA", "NVDA", "AAPL", "AMZN"],
+
+  "positions": {
+    "TSLA": {
+      "entry": 250.00,
+      "stop": 235.00,
+      "shares": 30,
+      "targets": [[1.0, 0.33], [2.0, 0.33]],
+      "trail_after_R": 2.0,
+      "trail_method": "21ema"
+    }
+  }
+}
