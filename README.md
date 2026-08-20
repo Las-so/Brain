@@ -143,6 +143,46 @@ scale-out/stop/trailing logic (as pure, network-free functions), the
 fetch retry/backoff/MultiIndex-column handling, config loading, and
 webhook notification formatting — all without hitting the network.
 
+## MCP Server
+
+`mcp_server.py` wraps this repo's scan/position/risk logic as [MCP](https://modelcontextprotocol.io)
+tools, so an MCP client (Claude Desktop, an agent session, the MCP
+inspector) can call it directly instead of shelling out to the scripts. It
+adds no new trading logic and places no orders -- it's a thin adapter over
+the already-tested functions in `aristotle_alert_system.py`,
+`robinhood_scan.py`, and `robinhood_risk.py`.
+
+Tools exposed:
+
+| Tool | Wraps | Network? |
+|---|---|---|
+| `scan_ticker` | `aristotle_alert_system.scan_ticker` | yes (yfinance) |
+| `check_position` | `aristotle_alert_system.evaluate_position` | yes (yfinance) |
+| `run_watchlist_scan` | full watchlist + position scan | yes (yfinance) |
+| `evaluate_confluence` | `robinhood_scan.evaluate` | no (caller supplies bars) |
+| `size_position` | `robinhood_risk.position_size` | no |
+| `check_daily_caps` | `robinhood_risk.daily_caps_ok` | no |
+| `get_config` | `aristotle_alert_system.load_config` | no |
+
+### Run
+
+```bash
+pip install -r requirements.txt
+```
+
+Test interactively with the MCP inspector:
+
+```bash
+mcp dev mcp_server.py
+```
+
+Or run it directly over stdio for a real MCP client config (e.g. Claude
+Desktop's `claude_desktop_config.json`):
+
+```bash
+python mcp_server.py
+```
+
 ### Disclaimer
 
 Every heuristic here (candlestick patterns, divergence, golden pocket,
