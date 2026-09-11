@@ -1,6 +1,18 @@
 # Brain
 LLM AGENT
 
+## Roles
+
+Role charters live in [`roles/`](roles/). Each one defines a seat: what it
+decides, what it only advises on, the gates work passes through, and the
+checklists that get run as written.
+
+- [Executive Creative Director & Brand Systems Architect](roles/executive-creative-director.md)
+  — final sign-off on anything a customer sees or holds: logos, labels,
+  packaging, typography, color, imagery; brand consistency across physical
+  and digital; print specs and production readiness; and whether the design
+  communicates the intended quality, emotion, and price level.
+
 ## Aristotle Alert System
 
 A watchlist scanner and open-position manager built around the Aristotle
