@@ -26,11 +26,9 @@ Design notes:
   for across the codebase.
 - Transport is injected (the `ask` argument). This module builds state,
   composes answers, and applies policy; it does not own the HTTP contract, so
-  it needs no credentials and is fully testable offline. The HTTP `ask`
-  implementation is deliberately not included yet: it must be written against
-  the current TypeSafe API reference rather than guessed at, since a wrong
-  field name would fail at runtime against real money. See `ask`'s contract in
-  grade_setup() for the shape it must satisfy.
+  it needs no credentials and is fully testable offline. typesafe_client.ask
+  is the HTTP implementation; see its module docstring for what about that
+  contract is still unverified against the live API.
 """
 
 # --- Reviewable constants: the questions and the policy ----------------------
