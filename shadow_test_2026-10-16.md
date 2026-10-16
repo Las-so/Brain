@@ -40,3 +40,20 @@ Standing flags:
 - 10:47 CT (morning, v1, six names, daily-only scan): SLB triggered; logged in git history.
 - 11:10 CT (morning v2, nine names, MTF + sector check added at Larry's correction): table above.
   2 of 9 triggered (SLB holding above entry, UAL failed back below).
+
+### 12:01 PM CT midday checkpoint (fresh scan + fresh Robinhood quotes 17:01 UTC)
+- SLB (MTF 2, the A-grade setup): spot 49.64, further above the 48.55 entry. $49C mark 2.645
+  vs 2.68 paper fill at 10:47 = roughly flat (-$3/contract at mark, bid 2.47 if sold). The
+  stock is +1.09 past entry, so a true fill at the trigger moment would be well green; our
+  10:47 late-fill convention eats that.
+- UAL: triggered at 101.78 this morning, now 98.39, BELOW the 98.13 stop level territory
+  (stop 98.13, spot 0.26 above it). A paper long from the trigger is near max loss. The
+  intraday failed-break lesson in full.
+- AAL: faded to 12.09, never triggered. The waiting rule saved the premium.
+- SOUN 4.72, IONQ 31.87, MSTR 137.37: none triggered, all MTF 0.
+- Bears COP (145.79) / XOM (177.32) / XLE (67.86): none triggered, moving AWAY from their
+  triggers all day; XLE is 4 cents from its 67.90 stop level on the signal candle. Energy is
+  rallying, the bear engulfs are failing without ever confirming. The 15c rule filtered all
+  three, exactly its job.
+- Midday read: entry-confirmation + MTF is doing the work. The only filled name is the only
+  MTF-2 name and the only one above water on the underlying; every skipped trigger saved money.
