@@ -57,3 +57,24 @@ Standing flags:
   three, exactly its job.
 - Midday read: entry-confirmation + MTF is doing the work. The only filled name is the only
   MTF-2 name and the only one above water on the underlying; every skipped trigger saved money.
+
+### 2:47 PM CT NEAR-CLOSE FINAL (fresh scan + Robinhood quotes 19:47 UTC)
+Day's scoreboard, all 9, watch-only:
+- SLB (BULL, MTF 2): the day's only win. Spot 49.55, held $1.00 above entry all afternoon.
+  $49C mark 2.44 at close vs morning quotes; our LATE 10:47 paper fill at 2.68 shows -$24,
+  but SLB crossed 48.55 around the open when the contract was near its 1.87 prior close —
+  a true at-trigger fill would be up roughly $55-57/contract (+~30%). Logged both numbers.
+- UAL (BULL, MTF 0): triggered 101.78, closed near 96.29 — through the 98.13 stop. Paper
+  loss at stop = -1R on the underlying; the option would have lost roughly half its premium.
+  The day's only stop-out, and it was the MTF-0 trigger.
+- AAL (MTF 1 morning, decayed to 0): never triggered, faded to 11.87. Premium saved.
+- SOUN, IONQ, MSTR (MTF 0): never triggered. Premium saved.
+- COP, XOM, XLE (BEAR, MTF 0): never triggered; energy rallied all day (XOM closed 4 cents
+  from invalidating its signal candle). All three bear engulfs failed WITHOUT costing money
+  because the 15c break never came. COP $140P mark fell 4.45 -> 2.72 (-39%) — that is what
+  buying the unconfirmed bear thesis at yesterday's close would have lost.
+
+DAY'S LEDGER (would-have-been): 1 winner (SLB, the only MTF-2), 1 stop-out (UAL, MTF-0),
+7 no-trades that cost nothing. Net on the two fills at true-trigger pricing: roughly +$55
+on SLB vs -$30 to -$50 on UAL depending on exit discipline — approximately breakeven to
+slightly positive, with the entire difference carried by the MTF filter.
