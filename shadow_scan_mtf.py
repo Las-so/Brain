@@ -19,8 +19,7 @@ SECTORS = {
     "media_telecom": ["T", "VZ", "NFLX", "SIRI", "ROKU", "PINS", "DKNG"],
     "space_defense": ["RKLB", "LUNR", "ASTS"],
 }
-TICKER_SECTOR = {t: s for s, ts in SECTORS.items() for t in ts}
-UNIVERSE = list(TICKER_SECTOR)
+from universe_industries import TICKER_SECTOR, UNIVERSE  # noqa: E402 — 60+ industry groups, ~240 names
 WICK, LEVEL = 2.0, 0.02
 
 
