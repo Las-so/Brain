@@ -52,7 +52,7 @@ for t in UNIVERSE:
         continue
     df = df.rename(columns=str.lower)
     intraday = None
-    if df.index[-1].date() == datetime.date(2026, 10, 16):
+    if df.index[-1].date() >= datetime.date.today():
         intraday = df.iloc[-1]
         df = df.iloc[:-1]
     sig, prev = df.iloc[-1], df.iloc[-2]
@@ -110,7 +110,7 @@ for t in UNIVERSE:
                      tf_4h=t4, tf_30m=t30, mtf_score=score))
 
 out = pd.DataFrame(rows).sort_values(["mtf_score"], ascending=False)
-print("ALL candidates (daily signal from Thu Oct 15):")
+print("ALL candidates (daily signal from Mon Oct 27):")
 print(out.to_string(index=False))
 
 # sector cap: max 2 per sector, prefer higher mtf score, aim for 9
